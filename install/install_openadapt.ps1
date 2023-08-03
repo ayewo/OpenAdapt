@@ -17,7 +17,6 @@ $pythonMinVersion = "3.10.0" # Change this if a different Lower version are supp
 $pythonMaxVersion = "3.10.12" # Change this if a different Higher version are supported by OpenAdapt
 $pythonInstaller = "python-3.10.11-amd64.exe"
 $pythonInstallerURL = "https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe"
-# $pythonPath = "C:\Program Files\Python310;C:\Program Files\Python310\Scripts"
 
 $gitCmd = "git"
 $gitInstaller = "Git-2.40.1-64-bit.exe"
@@ -196,7 +195,7 @@ function GetPythonCMD {
         if (ComparePythonVersion $versionString) {
             return $pythonCmd
         }
-    } 
+    }
 
     # Install required python version
     Write-Host "Downloading python installer..."
