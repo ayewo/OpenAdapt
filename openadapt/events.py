@@ -11,7 +11,8 @@ from loguru import logger
 from scipy.spatial import distance
 import numpy as np
 
-from openadapt import common, crud, models, utils
+from openadapt import common, models, utils
+from openadapt.db import crud
 
 MAX_PROCESS_ITERS = 1
 MOUSE_MOVE_EVENT_MERGE_DISTANCE_THRESHOLD = 1
@@ -760,6 +761,6 @@ def process_events(
         f"{num_total=}"
     )
     logger.info(
-        f"{pct_action_events=} {pct_window_events=} {pct_screenshots=} " f"{pct_total=}"
+        f"{pct_action_events=} {pct_window_events=} {pct_screenshots=} {pct_total=}"
     )
     return action_events, window_events, screenshots
